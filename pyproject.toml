@@ -7,10 +7,14 @@ name = "photontorch"
 dynamic = ["version"]
 description = "PhotonTorch: a photonic simulation framework based on the deep learning framework PyTorch."
 readme = "README.md"
+requires-python = ">=3.9"
 authors = [{name = "Floris Laporte", email = "floris.laporte@ugent.be"}]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Development Status :: 3 - Alpha",
     "Operating System :: OS Independent",
     "License :: OSI Approved :: GNU Affero General Public License v3",

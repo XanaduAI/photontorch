@@ -48,16 +48,16 @@ Read the full documentation here: [https://docs.photontorch.com](https://docs.ph
 
 ### Required dependencies
 
-- Python 2.7 (Linux only) or 3.6+. It's recommended to use the [Anaconda](http://www.anaconda.com/download) distribution.
-- [`pytorch>=1.5.0`](http://pytorch.org): `conda install pytorch` (see [pytorch.org](https://pytorch.org) for more installation options for your CUDA version)
-- [`numpy`](http://www.numpy.org): `conda install numpy`
-- [`scipy`](http://www.scipy.org): `conda install scipy`
+- Python 3.9 through 3.12. It's recommended to use the [Anaconda](http://www.anaconda.com/download) distribution.
+- [`pytorch>=2.2.0,<2.13`](http://pytorch.org): `conda install pytorch` (see [pytorch.org](https://pytorch.org) for more installation options for your CUDA version)
+- [`numpy>=1.26.0`](http://www.numpy.org): `conda install numpy`
+- [`scipy>=1.11.2`](http://www.scipy.org): `conda install scipy`
 
 ### Optional (but recommended) dependencies
 
 - [`tqdm`](https://github.com/tqdm/tqdm): `conda install tqdm` [progress bars]
-- [`networkx`](http://networkx.github.io): `conda install networkx` [network visualization]
-- [`matplotlib`](http://matplotlib.org): `conda install matplotlib` [visualization]
+- [`networkx>=2.5`](http://networkx.github.io): `conda install networkx` [network visualization]
+- [`matplotlib>=3.7.3`](http://matplotlib.org): `conda install matplotlib` [visualization]
 - [`pytest`](http://docs.pytest.org): `conda install pytest` [to run tests]
 - [`pandoc`](https://pandoc.org): `conda install pandoc` [to generate docs]
 - [`sphinx`](https://www.sphinx-doc.org): `pip install sphinx nbsphinx` [to generate docs]
