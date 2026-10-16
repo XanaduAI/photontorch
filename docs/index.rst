@@ -44,17 +44,17 @@ Dependencies
 Required dependencies
 ^^^^^^^^^^^^^^^^^^^^^
 
-    - Python 2.7 (linux only) or 3.6+.  It's recommended to use the `Anaconda <https://www.anaconda.com/download>`_ distribution.
-    - `pytorch <https://pytorch.org>`_ >=1.5.0:  ``conda install pytorch`` (see `pytorch.org <https://pytorch.org>`_ for more installation options for your CUDA version)
-    - `numpy <https://numpy.org>`_ : ``conda install numpy``
-    - `scipy <https://scipy.org>`_ : ``conda install scipy``
+    - Python 3.9 through 3.12.  It's recommended to use the `Anaconda <https://www.anaconda.com/download>`_ distribution.
+    - `pytorch <https://pytorch.org>`_ >=2.2.0,<2.13:  ``conda install pytorch`` (see `pytorch.org <https://pytorch.org>`_ for more installation options for your CUDA version)
+    - `numpy <https://numpy.org>`_ >=1.26.0: ``conda install numpy``
+    - `scipy <https://scipy.org>`_ >=1.11.2: ``conda install scipy``
 
 Recommended dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
     - `tqdm <https://github.com/tqdm/tqdm>`_ : ``conda install tqdm`` [progress bars]
-    - `matplotlib <https://matplotlib.org>`_ : ``conda install matplotlib`` [network visualization]
-    - `networkx <https://networkx.github.io>`_ : ``conda install networkx`` [visualization]
+    - `matplotlib <https://matplotlib.org>`_ >=3.7.3: ``conda install matplotlib`` [network visualization]
+    - `networkx <https://networkx.github.io>`_ >=2.5: ``conda install networkx`` [visualization]
     - `pytest <http://docs.pytest.org>`_ : ``conda install pytest`` [to run tests]
     - `pandoc <https://pandoc.org>`_: ``conda install pandoc`` [to generate docs]
     - `sphinx <https://www.sphinx-doc.org>`_ : ``pip install sphinx nbsphinx`` [to generate docs]
