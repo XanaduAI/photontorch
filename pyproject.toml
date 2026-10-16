@@ -22,6 +22,20 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+# Torch 2.13 removed tensor.names, which Network._handle_source still uses.
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.2",
+    "torch>=2.2.0,<2.13",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7.3"]
+graph = ["matplotlib>=3.7.3", "networkx>=2.5"]
+lfilter = ["torch-lfilter"]
+examples = ["matplotlib>=3.7.3", "tqdm>=4.40"]
+test = ["coverage>=4.5", "pytest>=3.8.0", "pytest-cov>=2.6"]
+docs = ["nbsphinx", "sphinx>=3.0"]
 
 [project.urls]
 Homepage = "http://github.com/flaport/photontorch"
@@ -30,4 +44,4 @@ Homepage = "http://github.com/flaport/photontorch"
 include = ["photontorch*"]
 
 [tool.setuptools.dynamic]
-version = {attr = "photontorch.__version__"}
+version = {attr = "photontorch._version.__version__"}
