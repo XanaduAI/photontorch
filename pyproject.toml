@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "photontorch"
-version = "0.4.1"
+dynamic = ["version"]
 description = "PhotonTorch: a photonic simulation framework based on the deep learning framework PyTorch."
 readme = "README.md"
 authors = [{name = "Floris Laporte", email = "floris.laporte@ugent.be"}]
@@ -24,3 +24,6 @@ Homepage = "http://github.com/flaport/photontorch"
 
 [tool.setuptools.packages.find]
 include = ["photontorch*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "photontorch.__version__"}
