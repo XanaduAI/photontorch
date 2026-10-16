@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photontorch"
+dynamic = ["version"]
+description = "PhotonTorch: a photonic simulation framework based on the deep learning framework PyTorch."
+readme = "README.md"
+authors = [{name = "Floris Laporte", email = "floris.laporte@ugent.be"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 2.7",
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "http://github.com/flaport/photontorch"
+
+[tool.setuptools.packages.find]
+include = ["photontorch*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "photontorch.__version__"}
