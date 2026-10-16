@@ -18,6 +18,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+requires-python = "==3.8.18"
 
 [project.urls]
 Homepage = "http://github.com/flaport/photontorch"
