@@ -30,7 +30,7 @@ clone the repository and link with pip:
 git clone https://git.photontorch.com/photontorch.git
 ./install-git-hooks.sh # Unix [Linux/Mac/BSD/...]
 install-git-hooks.bat  # Windows
-pip install -e photontorch
+pip install -e "photontorch[test]"
 ```
 
 During development, use pytest to run the tests from within the root
@@ -46,22 +46,18 @@ Read the full documentation here: [https://docs.photontorch.com](https://docs.ph
 
 ## Dependencies
 
-### Required dependencies
+Python 3.9 or newer. The test suite has been run through Python 3.12.
 
-- Python 2.7 (Linux only) or 3.6+. It's recommended to use the [Anaconda](http://www.anaconda.com/download) distribution.
-- [`pytorch>=1.5.0`](http://pytorch.org): `conda install pytorch` (see [pytorch.org](https://pytorch.org) for more installation options for your CUDA version)
-- [`numpy`](http://www.numpy.org): `conda install numpy`
-- [`scipy`](http://www.scipy.org): `conda install scipy`
+`pip install photontorch` installs torch, numpy, and scipy. Those three are imported whenever the package is imported. Torch must be at least 2.2 and older than 2.13. See [pytorch.org](https://pytorch.org) for a CUDA build.
 
-### Optional (but recommended) dependencies
+Install an extra when you need that capability.
 
-- [`tqdm`](https://github.com/tqdm/tqdm): `conda install tqdm` [progress bars]
-- [`networkx`](http://networkx.github.io): `conda install networkx` [network visualization]
-- [`matplotlib`](http://matplotlib.org): `conda install matplotlib` [visualization]
-- [`pytest`](http://docs.pytest.org): `conda install pytest` [to run tests]
-- [`pandoc`](https://pandoc.org): `conda install pandoc` [to generate docs]
-- [`sphinx`](https://www.sphinx-doc.org): `pip install sphinx nbsphinx` [to generate docs]
-- [`torch-lfilter`](https://github.com/flaport/torch_lfilter): `pip install torch-lfilter` [faster lfilter for detectors]
+- `pip install photontorch[plot]` installs matplotlib. `Network.plot` and `BERLoss.plot` import it. A simulation does not.
+- `pip install photontorch[graph]` installs matplotlib and networkx. `Network.graph` imports both. A simulation does not.
+- `pip install photontorch[lfilter]` installs torch-lfilter. Detectors use it when it is present, and fall back to a pure Python filter when it is not.
+- `pip install photontorch[examples]` installs matplotlib and tqdm. The notebooks use both. The library does not import tqdm.
+- `pip install photontorch[test]` installs pytest, coverage, and pytest-cov.
+- `pip install photontorch[docs]` installs sphinx and nbsphinx. Building the docs also needs [pandoc](https://pandoc.org), which is not a Python package.
 
 ## Reference
 

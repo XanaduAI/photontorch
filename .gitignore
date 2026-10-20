@@ -46,6 +46,8 @@ __pycache__
 .vscode
 tempCodeRunnerFile.py
 
+.venv*
+
 # pip
 *.egg-info
 build/*
